@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<base id="base">
+<div id="app"></div>
+<style>
+  * { margin: 0; }
+  body { font-family: system-ui, sans-serif; }
+</style>
+<script>
+window.onerror = e => {
+  require = require('esm')(module)
+  const { ipcRenderer } = require('electron')
+  console.error('window error', e)
+  ipcRenderer.send('WINDOW_ERROR', e)
+}
+require('./renderer')
+</script>

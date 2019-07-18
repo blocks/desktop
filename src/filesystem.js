@@ -19,7 +19,7 @@ export const getFiles = async ({ dirname }) => {
     }
   })
     .filter(file => file.isDirectory || /\.(md|mdx)$/.test(file.ext))
-    .filter(file => !file.pathname.startsWith('.'))
+    .filter(file => !file.filename.startsWith('.'))
 
   return files
 }

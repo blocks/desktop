@@ -15,24 +15,24 @@
     "watch": "babel src -d renderer -w"
   },
   "dependencies": {
-    "@blocks/editor": "^0.0.28",
-    "@blocks/kit": "^0.0.28",
-    "@mdx-js/react": "^1.0.27",
-    "electron-log": "^3.0.6",
-    "electron-store": "^4.0.0",
-    "lodash.debounce": "^4.0.8",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-feather": "^2.0.3",
-    "theme-ui": "^0.2.14"
+    "@blocks/editor": "0.0.28",
+    "@blocks/kit": "0.0.28",
+    "@mdx-js/react": "1.0.27",
+    "electron-log": "3.0.6",
+    "electron-store": "4.0.0",
+    "lodash.debounce": "4.0.8",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-feather": "2.0.3",
+    "theme-ui": "0.2.14"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-react": "^7.0.0",
-    "electron": "^5.0.7",
-    "electron-builder": "^21.1.1"
+    "@babel/cli": "7.5.5",
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "@babel/preset-react": "7.0.0",
+    "electron": "5.0.7",
+    "electron-builder": "21.1.1"
   },
   "build": {
     "appId": "io.blocks",

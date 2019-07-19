@@ -8,7 +8,7 @@ import { Folder, FileText } from 'react-feather'
 import debounce from 'lodash.debounce'
 
 import Layout from './layout'
-import { getFile, getFiles } from './filesystem'
+import { getFile, getFiles, getParentDirectory } from './filesystem'
 
 const App = () => {
   const [openFilePathname, setOpenFilePathname] = useState(null)
@@ -24,6 +24,11 @@ const App = () => {
   const updateOpenFileContents = async () => {
     const contents = await getFile(openFilePathname)
     setOpenFileContents(contents)
+  }
+
+  const handleParentDirectorySelection = () => {
+    const parentDir = getParentDirectory(dirname)
+    setDirname(parentDir)
   }
 
   const handleFileListSelection = async file => {
@@ -83,6 +88,25 @@ const App = () => {
           }}
         >
           <Styled.ul>
+            <Styled.li
+              sx={{
+                my: 3
+              }}
+            >
+              <Styled.a
+                css={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  cursor: 'pointer'
+                }}
+                onClick={() => {
+                  handleParentDirectorySelection()
+                }}
+              >
+                <Folder />
+                <span sx={{ ml: 2 }}>..</span>
+              </Styled.a>
+            </Styled.li>
             {files.map(file => (
               <Styled.li
                 key={file.pathname}

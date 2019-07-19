@@ -29,3 +29,8 @@ export const getFile = async filename => {
   const code = await readFile(filename)
   return code
 }
+
+export const getParentDirectory = pathname => {
+  if (!pathname) return
+  return path.join(pathname, '..')
+}

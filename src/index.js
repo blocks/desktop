@@ -4,7 +4,7 @@ import { remote, ipcRenderer } from 'electron'
 import { jsx, Styled } from 'theme-ui'
 import { render } from 'react-dom'
 import { Editor, serializer, stringifyMDX } from '@blocks/editor'
-import { Folder, FileText } from 'react-feather'
+import { Folder, FileText, ArrowLeft } from 'react-feather'
 import debounce from 'lodash.debounce'
 
 import Layout from './layout'
@@ -56,6 +56,8 @@ const App = () => {
   }, [openFilePathname])
 
   if (openFilePathname && openFileContents) {
+    const parentDir = getParentDirectory(openFilePathname)
+
     return (
       <Styled.root
         css={{
@@ -66,6 +68,30 @@ const App = () => {
           marginTop: '40px'
         }}
         >
+        <Styled.a
+          css={{
+            display: 'flex',
+            alignItems: 'center',
+            cursor: 'pointer',
+            marginBottom: '2px'
+          }}
+          onClick={() => {
+            handleFileListSelection(parentDir)
+          }}
+        >
+          <ArrowLeft />
+          <span sx={{ ml: 2 }}>Back</span>
+        </Styled.a>
+        <Styled.p
+          css={{
+            display: 'flex',
+            alignItems: 'center',
+            marginBottom: '20px'
+          }}
+        >
+            <FileText />
+            <span sx={{ ml: 2 }}>{openFilePathname}</span>
+        </Styled.p>
         <Editor
           initialValue={openFileContents}
           onChange={({ value }) => {

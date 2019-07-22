@@ -9,8 +9,8 @@
   "main": "main/index.js",
   "scripts": {
     "start": "yarn prepare && electron main/index.js",
-    "build": "build",
-    "pack": "build --dir",
+    "build": "electron-builder",
+    "pack": "electron-builder --dir",
     "prepare": "babel src -d renderer",
     "watch": "babel src -d renderer -w"
   },
@@ -37,7 +37,7 @@
   "build": {
     "appId": "io.blocks",
     "productName": "Blocks",
-    "copyright": "© 2019 Blocks contributores. All rights reserved",
+    "copyright": "© 2019 Blocks contributors. All rights reserved",
     "mac": {
       "category": "public.app-category.developer-tools"
     },

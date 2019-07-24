@@ -32,7 +32,7 @@
     "@babel/preset-env": "7.5.5",
     "@babel/preset-react": "7.0.0",
     "electron": "5.0.7",
-    "electron-builder": "21.1.1"
+    "electron-builder": "21.1.5"
   },
   "build": {
     "appId": "io.blocks",

@@ -1,9 +1,11 @@
 import React from 'react'
-import { ThemeProvider } from 'theme-ui'
+import { ThemeProvider, ColorMode } from 'theme-ui'
 import { theme } from '@blocks/editor'
+import desktopTheme from './theme'
 
 export default ({ children }) => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={theme && desktopTheme}>
+    <ColorMode />
     {children}
   </ThemeProvider>
 )

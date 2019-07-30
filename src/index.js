@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { useState, useEffect } from 'react'
 import { remote, ipcRenderer } from 'electron'
-import { jsx, Styled } from 'theme-ui'
+import { jsx, Styled, useColorMode } from 'theme-ui'
 import { render } from 'react-dom'
 import { Editor, serializer, stringifyMDX } from '@blocks/editor'
 import { Folder, FileText, ArrowLeft } from 'react-feather'
@@ -15,6 +15,8 @@ const App = () => {
   const [openFileContents, setOpenFileContents] = useState('')
   const [dirname, setDirname] = useState(remote.app.getPath('home'))
   const [files, setFiles] = useState([])
+
+  const [colorMode, setColorMode] = useColorMode()
 
   const updateFileList = async () => {
     const filelist = await getFiles({ dirname })
@@ -82,6 +84,12 @@ const App = () => {
           <ArrowLeft />
           <span sx={{ ml: 2 }}>Back</span>
         </Styled.a>
+        <button
+          onClick={e => {
+            setColorMode(colorMode === 'light' ? 'dark' : 'light')
+          }}>
+          Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+        </button>
         <Styled.p
           css={{
             display: 'flex',
@@ -113,6 +121,12 @@ const App = () => {
             marginTop: '40px'
           }}
         >
+          <button
+            onClick={e => {
+              setColorMode(colorMode === 'light' ? 'dark' : 'light')
+            }}>
+            Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+          </button>
           <Styled.ul>
             <Styled.li
               sx={{

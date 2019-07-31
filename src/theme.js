@@ -1,4 +1,7 @@
+import { theme } from '@blocks/editor'
+
 export default {
+    ...theme,
     initialColorMode: 'light',
     useCustomProperties: true,
     colors: {

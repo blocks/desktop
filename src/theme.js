@@ -3,11 +3,12 @@ import { theme } from '@blocks/editor'
 export default {
     ...theme,
     initialColorMode: 'light',
-    useCustomProperties: true,
     colors: {
+        ...theme.colors,
         background: '#fff',
         modes: {
             dark: {
+                ...theme.colors.dark,
                 background: '#000',
             }
         }

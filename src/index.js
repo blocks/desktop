@@ -59,47 +59,49 @@ const App = () => {
     const parentDir = getParentDirectory(openFilePathname)
     
     return (
-      <Styled.root
-        css={{
-          maxWidth: '48em',
-          padding: 32,
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          marginTop: '40px'
-        }}
-      >
-        <Styled.a
+      <Layout>
+        <Styled.root
           css={{
-            display: 'flex',
-            alignItems: 'center',
-            cursor: 'pointer',
-            marginBottom: '2px'
-          }}
-          onClick={() => {
-            handleFileListSelection(parentDir)
+            maxWidth: '48em',
+            padding: 32,
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginTop: '40px'
           }}
         >
-          <ArrowLeft />
-          <span sx={{ ml: 2 }}>Back</span>
-        </Styled.a>
-        <Styled.p
-          css={{
-            display: 'flex',
-            alignItems: 'center',
-            marginBottom: '20px'
-          }}
-        >
-            <FileText />
-            <span sx={{ ml: 2 }}>{openFilePathname}</span>
-        </Styled.p>
-        <Editor
-          initialValue={openFileContents}
-          onChange={({ value }) => {
-            write({ value })
-          }}
-          components={{}}
-        />
-      </Styled.root>
+          <Styled.a
+            css={{
+              display: 'flex',
+              alignItems: 'center',
+              cursor: 'pointer',
+              marginBottom: '2px'
+            }}
+            onClick={() => {
+              handleFileListSelection(parentDir)
+            }}
+          >
+            <ArrowLeft />
+            <span sx={{ ml: 2 }}>Back</span>
+          </Styled.a>
+          <Styled.p
+            css={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '20px'
+            }}
+          >
+              <FileText />
+              <span sx={{ ml: 2 }}>{openFilePathname}</span>
+          </Styled.p>
+          <Editor
+            initialValue={openFileContents}
+            onChange={({ value }) => {
+              write({ value })
+            }}
+            components={{}}
+          />
+        </Styled.root>
+      </Layout>
     )
   } else {
     return (
@@ -110,7 +112,7 @@ const App = () => {
             padding: 32,
             marginLeft: 'auto',
             marginRight: 'auto',
-            marginTop: '40px'
+            // marginTop: 'auto'
           }}
         >
           <Styled.ul>

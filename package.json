@@ -23,7 +23,7 @@
     "lodash.debounce": "4.0.8",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-feather": "2.0.3",
+    "react-feather": "2.0.10",
     "theme-ui": "0.2.25"
   },
   "devDependencies": {

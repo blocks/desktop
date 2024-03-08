@@ -19,7 +19,7 @@
     "@blocks/kit": "0.0.28",
     "@mdx-js/react": "1.1.4",
     "electron-log": "3.0.6",
-    "electron-store": "4.0.0",
+    "electron-store": "8.2.0",
     "lodash.debounce": "4.0.8",
     "react": "16.8.6",
     "react-dom": "16.8.6",

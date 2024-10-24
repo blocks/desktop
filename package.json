@@ -24,7 +24,7 @@
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-feather": "2.0.3",
-    "theme-ui": "0.2.25"
+    "theme-ui": "0.17.1"
   },
   "devDependencies": {
     "@babel/cli": "7.5.5",
@@ -47,6 +47,6 @@
     ]
   },
   "resolutions": {
-    "theme-ui": "0.2.25"
+    "theme-ui": "0.17.1"
   }
 }

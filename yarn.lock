@@ -2209,10 +2209,10 @@ electron-download@^4.1.0:
     semver "^5.4.1"
     sumchecker "^2.0.2"
 
-electron-log@3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-3.0.6.tgz#2291375572f6be5889f06fb32a35eab2930a1728"
-  integrity sha512-osPLk8m9+Ylo0k/okevdHUGsKpCNGxg206TxG2Ch8slGvlTZLI0955Ig4e+nJ6fHVDxFMv5dWkn2y8hwi0aENg==
+electron-log@5.4.4:
+  version "5.4.4"
+  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-5.4.4.tgz#957cb6fc43a73759bad32fadd4927f870eed0254"
+  integrity sha512-istWgaXjBfURBSS8LWVW9C3jsc6+ac+tY1lXrQEOTp0lVj+a4OlO1Tmqb36GgnEUDv92DGC9VI1HNXwJinWpgA==
 
 electron-publish@21.2.0:
   version "21.2.0"
